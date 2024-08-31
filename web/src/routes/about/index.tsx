@@ -21,7 +21,7 @@ export default component$(() => {
   };
 
   const contributorsResource = useResource$<Contributor[]>(async () => {
-    const url = 'https://api.github.com/repos/lissy93/personal-security-checklist/contributors?per_page=100';
+    const url = 'https://api.github.com/repos/aryan4859/personal-security-checklist-master/contributors?per_page=4';
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error('Failed to fetch contributors');
@@ -30,7 +30,7 @@ export default component$(() => {
   });
 
   const sponsorsResource = useResource$<Contributor[]>(async () => {
-    const url = 'https://github-sponsors.as93.workers.dev/lissy93';
+    const url = 'https://github-sponsors.as93.workers.dev/aryanstha';
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error('Failed to fetch sponsors');
@@ -139,12 +139,12 @@ export default component$(() => {
         <h2 class="text-3xl mb-2" id="author">About the Author</h2>
           <p>
             This project was originally started by
-            me, <a href="https://aliciasykes.com" class="link link-primary">Alicia Sykes</a>
+            me, <a href="https://pbscybsec.github.io" class="link link-primary">pbscybsec.github.io</a>
             - with a lot of help from the community.
           </p>
           <br />
           <div class="ml-4 float-right">
-            <img class="rounded-lg" width="180" height="240" alt="Alicia Sykes" src="https://i.ibb.co/fq10qhL/DSC-0597.jpg" />
+            <img class="rounded-lg" width="180" height="240" alt="pgs" src="https://pbscybsec.github.io/assets/img/logo-scl.svg" />
             <div class="flex gap-2 my-2 justify-between">
               {
                 socials.map((social, index) => (
@@ -178,8 +178,8 @@ export default component$(() => {
           <br />
           <p>
             For a more open source apps I've published,
-            see <a href="https://apps.aliciasykes.com/" class="link link-primary">apps.aliciasykes.com</a>,
-            or <a href="https://github.com/lissy93" class="link link-primary">follow me on GitHub</a>
+            see <a href="https://pbscybsec.github.io" class="link link-primary">pbscybsec.github.io</a>,
+            or <a href="https://github.com/pbscybsec" class="link link-primary">follow us on GitHub</a>
           </p>
 
       </article>
@@ -190,12 +190,12 @@ export default component$(() => {
         <h2 class="text-3xl mb-2">License</h2>
         <p>
           This project is split-licensed, with the checklist content (located
-          in <a class="link" href="https://github.com/Lissy93/personal-security-checklist/blob/HEAD/personal-security-checklist.yml">
+          in <a class="link" href="https://github.com/aryan4859/personal-security-checklist-master/blob/HEAD/personal-security-checklist.yml">
             <code>personal-security-checklist.yml</code>
           </a>) being licensed
           under <b><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></b>.
           And everything else (including all the code), licensed
-          under <b><a href="https://gist.github.com/Lissy93/143d2ee01ccc5c052a17">MIT</a></b>.
+          under <b><a href="#">MIT</a></b>.
         </p>
         <pre class="bg-front whitespace-break-spaces rounded text-xs my-2 mx-auto p-2">
           {license}
@@ -224,7 +224,7 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "About | Digital Defense",
+  title: "About | Security Checklist",
   meta: [
     {
       name: "description",
